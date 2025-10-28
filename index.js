@@ -109,10 +109,7 @@ app.post('/send-email', async (req, res) => {
 app.use("/api/users", userRoutes);
 
 app.use('/api/votes', voteRoutes);
-app.use(express.static(path.join(__dirname, "../frontend/public")));
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/public/index.html"));
-});
+
 
 
 // Start server
